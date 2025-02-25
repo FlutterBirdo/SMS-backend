@@ -17,7 +17,7 @@ app.post('/send-sms', (req, res) => {
         .create({
             body: `${username} asked to download ${game_name}`,
             from: 'YOUR_TWILIO_PHONE_NUMBER',
-            to: 'YOUR_PHONE_NUMBER'
+            to: '+16199020452'
         })
         .then(message => res.send({ success: true, msg: message.sid }))
         .catch(err => res.status(500).send({ success: false, error: err.message }));
